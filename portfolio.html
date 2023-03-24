@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WebStudio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,119 +14,173 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="" class="logo" lang="en">Web<span class="logo-header">Studio</span></a>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Студія</a></li>
-                    <li class="nav-item"><a href="./portfolio.html" class="nav-link">Портфоліо</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Контакти</a></li>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <a href="" class="logo" lang="en">Web<span class="logo-header">Studio</span></a>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="./index.html" class="nav-link">Студія</a></li>
+                        <li class="nav-item"><a href="./portfolio.html" class="nav-link">Портфоліо</a></li>
+                        <li class="nav-item"><a href="#form-modal" class="nav-link" id="open-form-modal">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="contacts-list">
+                    <li><a href="mailto:info@devstudio.com" class="nav-contacts">info@devstudio.com</a></li>
+                    <li><a href="tel:+380961111111" class="nav-contacts">+38 096 111 11 11</a></li>
                 </ul>
-            </nav>
-            <ul class="contacts-list">
-                <li><a href="mailto:info@devstudio.com" class="nav-contacts">info@devstudio.com</a></li>
-                <li><a href="tel:+380961111111" class="nav-contacts">+38 096 111 11 11</a></li>
-            </ul>
+            </div>
+            <hr class="line">
+        </header>
+
+        <main>
+            <section class="shop">
+                <h2 class="shop-title">Магазин</h2>
+                <ul class="buttons-list">
+                    <li class="buttons-item"><button type="button" class="shop-button">Усі</button></li>
+                    <li class="buttons-item"><button type="button" class="shop-button">Веб-сайти</button></li>
+                    <li class="buttons-item"><button type="button" class="shop-button">Додатки</button></li>
+                    <li class="buttons-item"><button type="button" class="shop-button">Дизайн</button></li>
+                    <li class="buttons-item"><button type="button" class="shop-button">Маркетинг</button></li>
+                </ul>
+
+                <ul class="products-list">
+                    <li class="products-item">
+                        <img src="./images/img(7).jpg" alt="Ноутбук" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Технокряк</h3>
+                            <p class="product-description">Веб-сайт</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(8).jpg" alt="Постер New Orlean vs Golden Star" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Постер <span lang="en">New Orlean vs Golden Star</span></h3>
+                            <p class="product-description">Дизайн</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(9).jpg" alt="Логотип" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Ресторан <span lang="en">Seafood</span></h3>
+                            <p class="product-description">Додаток</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(10).jpg" alt="Навушники" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Проєкт <span lang="en">Prime</span></h3>
+                            <p class="product-description">Маркетинг</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(11).jpg" alt="Дві коробки" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Проєкт <span lang="en">Boxes</span></h3>
+                            <p class="product-description">Додаток</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(12).jpg" alt="Монітор" width="370" height="294">
+                        <div class="product-container">
+                            <h3 lang="en" class="product-name">Inspiration has no Borders</h3>
+                            <p class="product-description">Веб-сайт</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(13).jpg" alt="Журнал" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Видання <span lang="en">Limited Edition</span></h3>
+                            <p class="product-description">Дизайн</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(14).jpg" alt="Етикетка" width="370" height="294">
+                        <div class="product-container">
+                            <h3 class="product-name">Проєкт LAB</h3>
+                            <p class="product-description">Маркетинг</p>
+                        </div>
+                    </li>
+                    <li class="products-item">
+                        <img src="./images/img(15).jpg" alt="Ноутбук" width="370" height="294">
+                        <div class="product-container">
+                            <h3 lang="en" class="product-name">Growing Business</h3>
+                            <p class="product-description">Додаток</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <a href="" class="logo" lang="en">Web<span class="logo-footer">Studio</span></a>
+            <address>
+                <ul class="address-list">
+                    <li class="address-item"><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" class="address"
+                            target="_blank" rel="noopener noreferrer">м. Київ,
+                            пр-т Лесі Українки, 26</a></li>
+                    <li class="address-item"><a href="mailto:info@devstudio.com"
+                            class="address-contacts">info@devstudio.com</a></li>
+                    <li class="address-item"><a href="tel:+380961111111" class="address-contacts">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </address>
+        </footer>
+    </div>
+
+    <div class="modal-contacts" id="form-modal">
+
+        <div class="modal-form-container">
+
+            <button class="close-button">x</button>
+            <form action="#" class="modal-form" data-netlify="true" id="form">
+
+                <h3 class="modal-form-title">Залиште свої дані, ми вам передзвонимо</h3>
+
+                <ul class="modal-form-list">
+                    <li class="modal-form-field">
+                        <label for="user-name" class="modal-field-name">Ім'я</label>
+                        <input type="text" class="modal-field-input" id="user-name" name="Ім'я">
+                    </li>
+
+                    <li class="modal-form-field">
+                        <label for="user-tel" class="modal-field-name">Телефон</label>
+                        <input type="text" class="modal-field-input" id="user-tel" name="Телефон">
+                    </li>
+
+                    <li class="modal-form-field">
+                        <label for="user-email" class="modal-field-name">Пошта</label>
+                        <input type="email" class="modal-field-input" id="user-email" name="Пошта">
+                    </li>
+
+                    <li class="modal-form-field">
+                        <label for="user-comment" class="modal-field-name">Коментар</label>
+                        <input type="text" class="modal-field-input" id="user-comment" name="Коментар">
+                    </li>
+                </ul>
+
+                <button class="modal-form-button" id="send-button">Відправити</button>
+            </form>
+
         </div>
-        <hr class="line">
-    </header>
+    </div>
 
-    <main>
-        <section class="shop">
-            <h2 class="shop-title">Магазин</h2>
-            <ul class="buttons-list">
-                <li class="buttons-item"><button type="button" class="shop-button">Усі</button></li>
-                <li class="buttons-item"><button type="button" class="shop-button">Веб-сайти</button></li>
-                <li class="buttons-item"><button type="button" class="shop-button">Додатки</button></li>
-                <li class="buttons-item"><button type="button" class="shop-button">Дизайн</button></li>
-                <li class="buttons-item"><button type="button" class="shop-button">Маркетинг</button></li>
-            </ul>
+    <div class="modal-contacts" id="success-modal">
 
-            <ul class="products-list">
-                <li class="products-item">
-                    <img src="./images/img(7).jpg" alt="Ноутбук" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Технокряк</h3>
-                        <p class="product-description">Веб-сайт</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(8).jpg" alt="Постер New Orlean vs Golden Star" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Постер <span lang="en">New Orlean vs Golden Star</span></h3>
-                        <p class="product-description">Дизайн</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(9).jpg" alt="Логотип" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Ресторан <span lang="en">Seafood</span></h3>
-                        <p class="product-description">Додаток</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(10).jpg" alt="Навушники" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Проєкт <span lang="en">Prime</span></h3>
-                        <p class="product-description">Маркетинг</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(11).jpg" alt="Дві коробки" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Проєкт <span lang="en">Boxes</span></h3>
-                        <p class="product-description">Додаток</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(12).jpg" alt="Монітор" width="370" height="294">
-                    <div class="product-container">
-                        <h3 lang="en" class="product-name">Inspiration has no Borders</h3>
-                        <p class="product-description">Веб-сайт</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(13).jpg" alt="Журнал" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Видання <span lang="en">Limited Edition</span></h3>
-                        <p class="product-description">Дизайн</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(14).jpg" alt="Етикетка" width="370" height="294">
-                    <div class="product-container">
-                        <h3 class="product-name">Проєкт LAB</h3>
-                        <p class="product-description">Маркетинг</p>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="./images/img(15).jpg" alt="Ноутбук" width="370" height="294">
-                    <div class="product-container">
-                        <h3 lang="en" class="product-name">Growing Business</h3>
-                        <p class="product-description">Додаток</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer class="footer">
-        <a href="" class="logo" lang="en">Web<span class="logo-footer">Studio</span></a>
-        <address>
-            <ul class="address-list">
-                <li class="address-item"><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" class="address" target="_blank"
-                        rel="noopener noreferrer">м. Київ,
-                        пр-т Лесі Українки, 26</a></li>
-                <li class="address-item"><a href="mailto:info@devstudio.com"
-                        class="address-contacts">info@devstudio.com</a></li>
-                <li class="address-item"><a href="tel:+380961111111" class="address-contacts">+38 096 111 11 11</a></li>
-            </ul>
-        </address>
-    </footer>
+        <div class="modal-form modal-form-container">
+            <button class="close-button">x</button>
+            <h3 class="modal-form-title">Дякуємо, Ваші дані збережені</h3>
+        </div>
+
+    </div>
+
+    <script src="./scripts/form.js"></script>
+
 </body>
 
 </html>

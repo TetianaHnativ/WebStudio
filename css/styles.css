@@ -1,23 +1,29 @@
 :root {
-    --link-active-color: #2196F3;
+    --blue-active-color: #2196F3;
     --button-active-color: #188CE8;
-    --contacts-and-body-color: #757575;
-    --link-and-title-color: #212121;
+    --gray-color: #757575;
+    --new-black-color: #212121;
     --black-color: #000000;
     --white-color: #ffffff;
     --address-contacts-color: rgba(255, 255, 255, 0.6);
     --background-color: #2F303A;
-    --light-pink-team-color: #F5F4FA;
+    --light-pink-color: #F5F4FA;
+    --light-gray: #f6f6f6;
 
 }
 
 body {
+    width: 100%;
+    background-color: var(--light-gray);
+}
+
+.wrapper {
+    height: 100%;
     background-color: var(--white-color);
-    color: var(--contacts-and-body-color);
+    color: var(--gray-color);
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     width: 1600px;
-    height: 2346px;
     margin: 0 auto;
 }
 
@@ -27,6 +33,15 @@ a {
 
 ul {
     list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
 }
 
 /* Header */
@@ -39,12 +54,12 @@ ul {
 .nav-link {
     font-weight: 500;
     font-size: 14px;
-    color: var(--link-and-title-color);
+    color: var(--new-black-color);
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--link-active-color);
+    color: var(--blue-active-color);
 }
 
 .logo {
@@ -52,9 +67,8 @@ ul {
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    color: var(--link-active-color);
+    color: var(--blue-active-color);
     margin-left: 215px;
-    padding-left: 40px;
 }
 
 .logo-header {
@@ -63,38 +77,38 @@ ul {
 
 .nav-contacts {
     font-size: 14px;
-    color: var(--contacts-and-body-color);
+    color: var(--gray-color);
 }
 
 .nav-contacts:hover,
 .nav-contacts:focus {
-    color: var(--link-active-color);
+    color: var(--blue-active-color);
 }
 
 .nav-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 50px;
-    margin: 9px 0px 0px 0px;
+    margin: 8px 0px 0px 0px;
 }
 
 .contacts-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 50px;
     margin-top: 8px;
 }
 
 .nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 103px;
+    gap: 93px;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 334px;
+    gap: 344px;
+}
+
+.line {
+    margin-top: 30px;
 }
 
 /* Hero */
@@ -103,7 +117,6 @@ ul {
     height: 400px;
     padding-top: 200px;
     background-color: var(--background-color);
-    margin-top: -5px;
 }
 
 .hero-title {
@@ -118,7 +131,7 @@ ul {
     text-transform: uppercase;
     color: var(--white-color);
 
-    margin: 0px 462px 30px 462px;
+    margin: 0px 452px 30px 452px;
 }
 
 .button {
@@ -131,10 +144,11 @@ ul {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    background-color: var(--link-active-color);
+    background-color: var(--blue-active-color);
     color: var(--white-color);
 
-    border: none;
+    border-radius: 4px;
+    border: outset var(--blue-active-color);
     cursor: pointer;
     margin: 0px 692px 0px 692px;
 }
@@ -150,14 +164,14 @@ ul {
 .section-title {
     text-align: center;
     font-size: 36px;
-    color: var(--link-and-title-color);
+    color: var(--new-black-color);
     margin: 0px 0px 50px 0px;
 }
 
 .hidden-title {
     text-align: center;
     font-size: 36px;
-    color: var(--link-and-title-color);
+    color: var(--new-black-color);
 }
 
 /* Advantages */
@@ -168,8 +182,11 @@ ul {
 
 .advantage-name {
     font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--link-and-title-color);
+    color: var(--new-black-color);
+    margin-bottom: 10px;
 }
 
 .advantage-description {
@@ -206,15 +223,16 @@ ul {
 
 .our-team {
     height: 554px;
-    background-color: var(--light-pink-team-color);
+    background-color: var(--light-pink-color);
     padding-top: 94px;
 }
 
 .worker-name {
     font-weight: 500;
     font-size: 16px;
-    color: var(--link-and-title-color);
+    color: var(--new-black-color);
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .worker-profeccion {
@@ -225,9 +243,10 @@ ul {
 .workers {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    width: 1170px;
-    margin: 0px 209px 94px 221px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 94px;
 }
 
 .our-team .section-title {
@@ -271,20 +290,22 @@ ul {
 
 .address:hover,
 .address:focus {
-    color: var(--link-active-color);
+    color: var(--blue-active-color);
 }
 
 .address-contacts:hover,
 .address-contacts:focus {
-    color: var(--link-active-color);
+    color: var(--blue-active-color);
 }
 
 .address-list {
+    width: 231px;
     margin: 20px 0px 60px 215px;
 }
 
 .address-item {
     margin-top: 9px;
+    height: 21px;
 }
 
 /* Portfolio */
@@ -297,27 +318,27 @@ ul {
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    background-color: var(--light-pink-team-color);
-    color: var(--link-and-title-color);
-    border-color: var(--light-pink-team-color);
+    background-color: var(--light-pink-color);
+    color: var(--new-black-color);
     padding: 6px 22px 6px 22px;
     cursor: pointer;
+    border-radius: 4px;
+    border: outset var(--light-pink-color);
 }
 
 .buttons-list {
     width: 575px;
     height: 54px;
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
     margin: 65px 513px 34px 512px;
 }
 
 .shop-button:hover,
 .shop-button:focus {
-    background-color: var(--link-active-color);
+    background-color: var(--blue-active-color);
     color: var(--white-color);
-    border-color: var(--link-active-color)
+    border-color: var(--blue-active-color)
 }
 
 .products-list {
@@ -331,11 +352,14 @@ ul {
 
 .product-name {
     font-size: 18px;
-    color: var(--link-and-title-color);
+    color: var(--new-black-color);
+    height: 36px;
+    margin-bottom: 4px;
 }
 
 .product-description {
     font-size: 16px;
+    height: 30px;
 }
 
 .products-item {
@@ -345,5 +369,122 @@ ul {
 }
 
 .product-container {
-    padding-left: 24px;
+    margin: 20px 24px 20px 24px;
+}
+
+/* Modal contacts */
+
+.modal-contacts {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(27 29 31 / 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-form-container {
+    background: #FFF;
+    padding: 40px;
+    position: relative;
+}
+
+.modal-form-title {
+    color: var(--new-black-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.modal-form-list {
+    width: 100%;
+}
+
+.modal-form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.modal-field-name {
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+
+.modal-field-input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 40px;
+
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 8px;
+}
+
+
+#user-comment {
+    height: 40px;
+}
+
+.modal-form-button {
+    color: var(--white-color);
+    background: var(--blue-active-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    padding: 10px 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border: outset var(--blue-active-color);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal-form-button:hover,
+.modal-form-button:focus {
+    background-color: var(--button-active-color);
+}
+
+.close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 20px;
+    color: var(--black-color);
+    cursor: pointer;
+    background: none;
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: all;
 }
