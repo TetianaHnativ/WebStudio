@@ -8,6 +8,8 @@ const openFormModalBtn = document.querySelector('#open-form-modal');
 const sendBtn = document.querySelector('#send-button');
 const closeBtns = document.querySelectorAll('.close-button');
 
+const products = document.querySelectorAll('.products-item');
+
 openFormModalBtn.addEventListener('click', () => {
     formModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
 })
@@ -50,3 +52,13 @@ form.addEventListener('submit', e => {
       .catch((error) => console.log('Sending form failed'));
 })
 
+const filterProducts = (filter) => {
+    products.forEach(product => {
+        const description = product.querySelector('.product-description').textContent;
+        if (filter !== 'Усі' && description !== filter) {
+            product.style.display = 'none';
+        } else {
+            product.style.display = 'block';
+        }
+    });
+}
