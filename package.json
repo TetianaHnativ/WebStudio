@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/TetianaHnativ/WebStudio/issues"
   },
-  "homepage": "https://github.com/TetianaHnativ/WebStudio#readme"
+  "homepage": "https://github.com/TetianaHnativ/WebStudio#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
