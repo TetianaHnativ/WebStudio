@@ -135,6 +135,7 @@ a {
 
 ul {
     list-style: none;
+    
 }
 
 h1,
@@ -305,7 +306,7 @@ h6 {
     flex-wrap: wrap;
     gap: 30px;
 
-    margin: 51px 215px 94px 215px;
+    margin: 51px auto 94px auto;
 
     width: 1170px;
     height: 98px;
@@ -321,14 +322,15 @@ h6 {
     flex-wrap: wrap;
     gap: 30px;
     width: 1170px;
-    margin: 0px 215px 94px 215px;
+    margin: 0px auto 94px auto;
 }
+
 
 
 /* Our team */
 
 .our-team {
-    height: 554px;
+    min-height: 554px; /* use min-height instead of height */
     background-color: var(--light-pink-color);
     padding-top: 94px;
 }
@@ -348,7 +350,7 @@ h6 {
 
 .workers {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -356,7 +358,8 @@ h6 {
 }
 
 .our-team .section-title {
-    margin: 0px 662px 50px 674px;
+    margin: 0px auto 50px auto;
+    text-align: center;
 }
 
 .workers-item {
