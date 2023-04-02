@@ -256,7 +256,7 @@ h6 {
     border-radius: 4px;
     border: outset var(--blue-active-color);
     cursor: pointer;
-    margin: auto;
+    margin:50px auto;
     
 }
 
