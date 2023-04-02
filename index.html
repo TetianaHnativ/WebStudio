@@ -50,7 +50,7 @@
         <main>
             <section class="hero">
                 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="button">Замовити послугу</button>
+                <button type="button" class="button" id="open-modal-btn">Замовити послугу</button>
             </section>
 
             <section class="section-advantages">
@@ -212,6 +212,52 @@
 
     <script src="./scripts/form.js"></script>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          
+          <form action="#" class="modal-form" data-netlify="true" id="form1" method="post">
+            <h3 class="modal-form-title">Залиште свої дані для замовлення послуги</h3>
+        <ul class="modal-form-list">
+
+                <li class="modal-form-field">
+                    <label for="user-name" class="modal-field-name">Ім'я</label>
+                    <input type="text" name="name" required>
+                </li>
+
+                <li class="modal-form-field">
+                    <label for="user-name" class="modal-field-name">Прізвище</label>
+                    <input type="text" name="surname" required>
+                </li>
+
+                <li class="modal-form-field">
+                    <label for="user-name" class="modal-field-name"> Email</label>
+                    <input type="email" name="email" required>
+                </li>
+
+                <li class="modal-form-field">
+                    <label for="user-name" class="modal-field-name"> Номер телефону</label>
+                    <input type="tel" name="phone_number" required>
+                </li>
+
+                <li>
+                    <label for="user-name" class="modal-field-name"> Послуги </label><br>
+                    <select required>
+                        <option value="option1">Варіант 1</option>
+                        <option value="option2">Варіант 2</option>
+                        <option value="option3">Варіант 3</option>
+                      </select>                
+                </li>
+                
+            
+            <!-- <textarea name="message" placeholder="Повідомлення"></textarea> -->
+        </ul>
+            <button type="submit" id="service-submit">Відправити</button>
+            
+          </form>
+        </div>
+      </div>
+      <script src="./scripts/serviceScript.js"></script>
 </body>
 
 </html>
