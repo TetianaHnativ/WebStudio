@@ -10,8 +10,6 @@ const closeBtns = document.querySelectorAll('.close-button');
 
 const products = document.querySelectorAll('.products-item');
 
-
-formModal.classList.add('is-active');
 openFormModalBtn.addEventListener('click', () => {
     formModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
 })
@@ -37,22 +35,40 @@ closeBtns.forEach(btn => {
 })
 
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
+    const name = document.querySelector('#name').value;
+    const phone = document.querySelector('#phone').value;
+    const email = document.querySelector('#email').value;
+    const comment = document.querySelector('#comment').value;
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
+    try {
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            name,
+            phone,
+            email,
+            comment
+            })
+        });
+
+        const data = await response.json();
+        console.log(data);
+        openSuccessModal();
         closeFormModal();
-        setTimeout(openSuccessModal, 700);
-        setTimeout(closeSuccessModal, 3000);
-      })
-      .catch((error) => console.log('Sending form failed'));
-})
+
+        document.querySelector('#name').value = '';
+        document.querySelector('#phone').value = '';
+        document.querySelector('#email').value = '';
+        document.querySelector('#comment').value = '';
+        } catch (err) {
+            console.error(err);
+        }
+  });
 
 const filterProducts = (filter) => {
     products.forEach(product => {
