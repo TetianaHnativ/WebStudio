@@ -10,6 +10,8 @@ const closeBtns = document.querySelectorAll('.close-button');
 
 const products = document.querySelectorAll('.products-item');
 
+
+formModal.classList.add('is-active');
 openFormModalBtn.addEventListener('click', () => {
     formModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
 })
