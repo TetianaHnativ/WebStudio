@@ -210,13 +210,13 @@
 
     </div>
 
-    <script src="./scripts/form.js"></script>
+  
 
     <div id="modal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           
-          <form action="#" class="modal-form" data-netlify="true" id="form1" method="post">
+          <form action="#" class="modal-form" data-netlify="true" id="form1">
             <h3 class="modal-form-title">Залиште свої дані для замовлення послуги</h3>
         <ul class="modal-form-list">
 
@@ -252,14 +252,25 @@
                 </li>
                 
             
-            <!-- <textarea name="message" placeholder="Повідомлення"></textarea> -->
+            
         </ul>
             <button type="submit" id="service-submit">Відправити</button>
             
           </form>
         </div>
       </div>
-      <script src="./scripts/serviceScript.js"></script>
+      
+
+    </div>
+    <div id="success-modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 class="modal-form-title">Ваш запит успішно відправлено!</h3>
+          <p>Дякуємо за вашу заявку. Ми зв'яжемось з вами найближчим часом.</p>
+        </div>
+      </div>
+      
+      <script src="./scripts/form.js"></script>
 </body>
 
 </html>
