@@ -34,6 +34,23 @@ closeBtns.forEach(btn => {
     })
 })
 
+const scriptTag = document.createElement('script');
+scriptTag.src = 'https://unpkg.com/imask';
+scriptTag.addEventListener('load', function() {
+    
+    const phoneInput = document.getElementById('phone');
+    const phoneMask = IMask(phoneInput, {
+        mask: '+{38}(000)-000-00-00'
+    });
+
+    phoneInput.addEventListener('input', function() {
+        const phoneRegex = /^\+38\(\d{3}\)-\d{3}-\d{2}-\d{2}$/;
+        const isValid = phoneRegex.test(phoneInput.value);
+
+        phoneInput.setCustomValidity(isValid ? '' : 'Please enter a valid phone number');
+    });
+});
+document.head.appendChild(scriptTag);
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
