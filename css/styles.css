@@ -15,104 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-.container .nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 519px; /* ширина лого + навиация width: 519px; */
-    width: 100%;
-    text-align: center;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-  header a {
-    text-decoration: none;
-    cursor: pointer;
-  }
-  header li {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 115%;
-    letter-spacing: 0.02em;
-    list-style: none;
-    align-self: center;
-  }
-  
-  .logo {
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 31px; /* identical to box height */
-    letter-spacing: 0.03em;
-    color: #2196f3;
-    align-self: center;
-    padding-right: 42px;
-  }
-  .logo span {
-    color: #000000;
-  }
-  
-  .menu {
-    max-width: 281px;
-    width: 100%;
-    padding-top: 31px;
-  }
-  
-  .nav-hover {
-    display: flex;
-    flex-direction: column;
-  }
-  .nav-hover a {
-    color: #212121;
-    padding-bottom: 28px;
-  }
-  .nav-hover a:hover {
-    color: #2196f3;
-  }
-  .nav-hover a:hover + .hover {
-    visibility: visible;
-  }
-  .nav-hover a:focus {
-    color: #2196f3;
-  }
-  .nav-hover a:focus + .hover {
-    visibility: visible;
-  }
-  
-  .hover {
-    visibility: hidden;
-    width: 100%;
-    border: 2px solid #2196f3;
-    border-radius: 2px;
-  }
-  
-  .mailto-tel {
-    display: flex;
-    justify-content: space-between;
-    width: 307px;
-    min-width: 270px;
-    padding-left: 20px;
-  }
-  .mailto-tel a {
-    color: #757575;
-  }
-  .mailto-tel :hover {
-    color: #2196f3;
-  }
-  .mailto-tel :focus {
-    color: #2196f3;
-  }
-  
-  .active a {
-    color: #2196f3;
-  }
-  .active .hover {
-    visibility: visible;
-  }
-  
+ 
 
 body {
     width: 100%;
@@ -179,6 +82,7 @@ h6 {
 }
 
 .nav-contacts {
+    
     font-size: 14px;
     color: var(--gray-color);
 }
@@ -256,7 +160,7 @@ h6 {
     border-radius: 4px;
     border: outset var(--blue-active-color);
     cursor: pointer;
-    margin:50px auto;
+    margin:30px auto;
     
 }
 
@@ -440,7 +344,7 @@ h6 {
     height: 54px;
     display: flex;
     gap: 8px;
-    margin: 0 auto;
+    margin: 65px auto 34px auto;
 }
 
 .shop-button:hover,
@@ -456,7 +360,7 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin: auto;
+    margin: 0 auto 34px auto;
 }
 
 .product-name {
