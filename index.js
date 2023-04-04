@@ -32,6 +32,10 @@ app.post('/', async (req, res) => {
   }
 });
 
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', 'error.html'));
+});
+
 async function startApp() {
     try {
         await mongoose.connect(DB_URL, {useUnifiedTopology: true, useNewUrlParser: true});

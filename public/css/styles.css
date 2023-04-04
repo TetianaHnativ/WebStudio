@@ -488,3 +488,38 @@ h6 {
     opacity: 1;
     pointer-events: all;
 }
+
+
+/* Error */
+
+
+.error-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 600px;
+}
+
+
+.error-code {
+    font-size: 150px;
+    color: #dbdbdb;
+    margin: 0;
+}
+
+.error-message {
+    font-size: 24px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.home-link {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
