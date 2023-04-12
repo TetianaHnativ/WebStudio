@@ -3,12 +3,13 @@ const MODAL_ACTIVE_CLASS_NAME = 'modal-active';
 const formModal = document.querySelector('#form-modal');
 const successModal = document.querySelector('#success-modal');
 const form = document.querySelector('#form');
-
 const openFormModalBtn = document.querySelector('#open-form-modal');
-const sendBtn = document.querySelector('#send-button');
+const sendBtn = document.querySelector('#contact-send-button');
 const closeBtns = document.querySelectorAll('.close-button');
 
+
 const products = document.querySelectorAll('.products-item');
+
 
 openFormModalBtn.addEventListener('click', () => {
     formModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
@@ -34,6 +35,7 @@ closeBtns.forEach(btn => {
     })
 })
 
+
 const scriptTag = document.createElement('script');
 scriptTag.src = 'https://unpkg.com/imask';
 scriptTag.addEventListener('load', function() {
@@ -52,6 +54,7 @@ scriptTag.addEventListener('load', function() {
 });
 document.head.appendChild(scriptTag);
 
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = document.querySelector('#name').value;
@@ -60,16 +63,16 @@ form.addEventListener('submit', async (e) => {
     const comment = document.querySelector('#comment').value;
 
     try {
-        const response = await fetch('/', {
+        const response = await fetch('/form-contact', {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-            name,
-            phone,
-            email,
-            comment
+                name,
+                phone,
+                email,
+                comment
             })
         });
 
@@ -82,11 +85,13 @@ form.addEventListener('submit', async (e) => {
         document.querySelector('#phone').value = '';
         document.querySelector('#email').value = '';
         document.querySelector('#comment').value = '';
+
         } catch (err) {
             console.error(err);
         }
   });
 
+  
 const filterProducts = (filter) => {
     products.forEach(product => {
         const description = product.querySelector('.product-description').textContent;
