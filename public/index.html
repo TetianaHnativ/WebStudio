@@ -213,64 +213,65 @@
 
     <div id="modal" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          
-          <form action="#" class="modal-form" data-netlify="true" id="form1">
-            <h3 class="modal-form-title">Залиште свої дані для замовлення послуги</h3>
-        <ul class="modal-form-list">
 
-            <li class="modal-form-field">
-                <label for="user-name" class="modal-field-name">Прізвище</label>
-                <input type="text" name="surname" required>
-            </li>
+            <span class="close">&times;</span>
+            <form action="#" class="modal-form" data-netlify="true" id="form1">
 
-                <li class="modal-form-field">
-                    <label for="user-name" class="modal-field-name">Ім'я</label>
-                    <input type="text" name="name" required>
-                </li>
+                <h3 class="modal-form-title">Залиште свої дані для замовлення послуги</h3>
 
-                
+                <ul class="modal-form-list">
+                    <li class="modal-form-field">
+                        <label for="user-name" class="modal-field-name">Прізвище</label>
+                        <input type="text" name="surname" required>
+                    </li>
 
-                <li class="modal-form-field">
-                    <label for="user-name" class="modal-field-name"> Email</label>
-                    <input type="email" name="email" required>
-                </li>
+                    <li class="modal-form-field">
+                        <label for="user-name" class="modal-field-name">Ім'я</label>
+                        <input type="text" name="name" required>
+                    </li>
 
-                <li class="modal-form-field">
-                    <label for="user-name" class="modal-field-name"> Номер телефону</label>
-                    <input type="tel" name="phone_number" required>
-                </li>
+                    <li class="modal-form-field">
+                        <label for="user-name" class="modal-field-name"> Email</label>
+                        <input type="email" name="email" required>
+                    </li>
 
-                <li>
-                    <label for="user-name" class="modal-field-name"> Послуги </label><br>
-                    <select required>
-                        <option value="option1">Варіант 1</option>
-                        <option value="option2">Варіант 2</option>
-                        <option value="option3">Варіант 3</option>
-                      </select>                
-                </li>
-                
-            
-            
-        </ul>
-            <button type="submit" id="service-submit">Відправити</button>
-            
-          </form>
+                    <li class="modal-form-field">
+                        <label for="user-name" class="modal-field-name"> Номер телефону</label>
+                        <input type="tel" name="phone_number" required>
+                    </li>
+
+                    <li>
+                        <label for="user-name" class="modal-field-name"> Категорія </label><br>
+                        <select required>
+                            <option value="option1">Варіант 1</option>
+                            <option value="option2">Варіант 2</option>
+                            <option value="option3">Варіант 3</option>
+                        </select>                
+                    </li>
+                    <li>
+                        <label for="user-name" class="modal-field-name"> Послуга </label><br>
+                        <select required>
+                            <option value="option1">Варіант 1</option>
+                            <option value="option2">Варіант 2</option>
+                            <option value="option3">Варіант 3</option>
+                        </select>                
+                    </li>
+                </ul>
+
+                <button type="submit" id="service-submit">Відправити</button>
+            </form>
         </div>
-      </div>
-      
-
     </div>
+
     <div id="success-modal1" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <h3 class="modal-form-title">Ваш запит успішно відправлено!</h3>
           <p>Дякуємо за вашу заявку. Ми зв'яжемось з вами найближчим часом.</p>
         </div>
-      </div>
+    </div>
       
-      <script src="./js/form.js"></script>
-      <script src="./js/secondForm.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/secondForm.js"></script>
 </body>
-
 </html>
