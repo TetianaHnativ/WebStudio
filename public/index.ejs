@@ -241,20 +241,17 @@
                     </li>
 
                     <li>
-                        <label for="user-name" class="modal-field-name"> Категорія </label><br>
-                        <select required>
-                            <option value="option1">Варіант 1</option>
-                            <option value="option2">Варіант 2</option>
-                            <option value="option3">Варіант 3</option>
+                        <label for="category" class="modal-field-name"> Категорія </label><br>
+                        <select name="category" id="category">
+                            <option value="" selected disabled>Оберіть категорію</option>
+                            <% categories.forEach((category) => { %>
+                                <option value="<%= category %>"><%= category %></option>
+                            <% }); %>
                         </select>                
                     </li>
                     <li>
-                        <label for="user-name" class="modal-field-name"> Послуга </label><br>
-                        <select required>
-                            <option value="option1">Варіант 1</option>
-                            <option value="option2">Варіант 2</option>
-                            <option value="option3">Варіант 3</option>
-                        </select>                
+                        <label for="service" class="modal-field-name"> Послуга </label><br>
+                        <select name="service" id="service"></select>               
                     </li>
                 </ul>
 
@@ -270,7 +267,8 @@
           <p>Дякуємо за вашу заявку. Ми зв'яжемось з вами найближчим часом.</p>
         </div>
     </div>
-      
+    
+    <script src="./js/index.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/secondForm.js"></script>
 </body>

@@ -55,6 +55,7 @@ scriptTag.addEventListener('load', function() {
 document.head.appendChild(scriptTag);
 
 
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = document.querySelector('#name').value;
