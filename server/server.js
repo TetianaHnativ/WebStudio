@@ -17,8 +17,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 
 //Get roters
-app.use('/', router);
-
+app.use(router);
 
 //Static files
 app.get('/', async (req, res) => {

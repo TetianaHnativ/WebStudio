@@ -3,7 +3,7 @@ const modal = document.getElementById("modal");
 const successModal1 = document.getElementById("success-modal1");
 const openModalBtn = document.getElementById("open-modal-btn");
 const closeModalBtn = document.getElementsByClassName("close");
-const form1 = document.getElementById("form1");
+const form1 = document.querySelector('#form1');
 const closeSuccessModalBtn = document.getElementById("close-success-modal-btn");
 
 // Додаємо події до кнопок
@@ -19,43 +19,48 @@ for (let i = 0; i < closeModalBtn.length; i++) {
 }
 
 // Додаємо подію до форми
-form1.addEventListener("submit", function (event) {
-event.preventDefault(); // Зупиняємо стандартну поведінку форми
+form1.addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-// Перевіряємо правильність введених даних
-const surname = form1.elements.surname.value;
-const name = form1.elements.name.value;
-const email = form1.elements.email.value;
-const phone_number = form1.elements.phone_number.value;
+  const data = {
+    lastName: document.getElementById('lastName').value,
+    firstName: document.getElementById('firstName').value,
+    phone: document.getElementById('phone1').value,
+    email: document.getElementById('email1').value,
+    serviceId: document.getElementById('service').value
+  };
 
-if (!surname || !name || !email || !phone_number) {
-    alert("Будь ласка, заповніть всі поля форми.");
-    return;
-}
+  try {
+    const response = await fetch('/orders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
 
-// Відправляємо дані форми на сервер за допомогою fetch()
-fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(new FormData(form1)).toString(),
-})
-.then(() => {
-        // Якщо відправлення форми успішно, закриваємо модальне вікно та відображаємо модальне вікно успішного відправлення форми
-        modal.style.display = "none";
-        setTimeout(function () {
-            successModal1.style.display = "block";
-        }, 700);
-        setTimeout(function () {
-            successModal1.style.display = "none";
-        }, 3000);
-    })
-    .catch((error) => console.log("Sending form failed"));
+    const responseData = await response.json();
+    console.log(responseData);
 
-    // Очищаємо всі поля форми
-    form1.elements.surname.value = "";
-    form1.elements.name.value = "";
-    form1.elements.email.value = "";
-    form1.elements.phone_number.value = "";
+    document.getElementById('lastName').value = '';
+    document.getElementById('firstName').value = '';
+    document.getElementById('phone1').value = '';
+    document.getElementById('email1').value = '';
+    document.getElementById('category').value = '';
+    document.getElementById('service').value = '';
+
+    modal.style.display = "none";
+    setTimeout(function () {
+      successModal1.style.display = "block";
+    }, 700);
+    setTimeout(function () {
+      successModal1.style.display = "none";
+    }, 3000);
+
+
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 

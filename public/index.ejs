@@ -26,7 +26,7 @@
 
             <div class="container">
                 <nav class="nav">
-                    <a href="" class="logo" lang="en">Web<span class="logo-header">Studio</span></a>
+                    <a href="/" class="logo" lang="en">Web<span class="logo-header">Studio</span></a>
                     <ul class="nav-list">
                         <li class="nav-item"><a href="/" class="nav-link">Студія</a></li>
                         <li class="nav-item"><a href="/portfolio" class="nav-link">Портфоліо</a></li>
@@ -215,34 +215,34 @@
         <div class="modal-content">
 
             <span class="close">&times;</span>
-            <form action="#" class="modal-form" data-netlify="true" id="form1">
+            <form action="/orders" method="POST" class="modal-form" data-netlify="true" id="form1">
 
                 <h3 class="modal-form-title">Залиште свої дані для замовлення послуги</h3>
 
                 <ul class="modal-form-list">
                     <li class="modal-form-field">
                         <label for="user-name" class="modal-field-name">Прізвище</label>
-                        <input type="text" name="surname" required>
+                        <input type="text" name="lastName" id="lastName"  required>
                     </li>
 
                     <li class="modal-form-field">
                         <label for="user-name" class="modal-field-name">Ім'я</label>
-                        <input type="text" name="name" required>
+                        <input type="text" name="firstName" id="firstName" required>
+                    </li>
+                    
+                    <li class="modal-form-field">
+                        <label for="user-name" class="modal-field-name"> Номер телефону</label>
+                        <input type="text" name="phone" id="phone1" required>
                     </li>
 
                     <li class="modal-form-field">
                         <label for="user-name" class="modal-field-name"> Email</label>
-                        <input type="email" name="email" required>
-                    </li>
-
-                    <li class="modal-form-field">
-                        <label for="user-name" class="modal-field-name"> Номер телефону</label>
-                        <input type="tel" name="phone_number" required>
+                        <input type="email" name="email"  id="email1" required>
                     </li>
 
                     <li>
                         <label for="category" class="modal-field-name"> Категорія </label><br>
-                        <select name="category" id="category">
+                        <select name="category" id="category" required>
                             <option value="" selected disabled>Оберіть категорію</option>
                             <% categories.forEach((category) => { %>
                                 <option value="<%= category %>"><%= category %></option>
