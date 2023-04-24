@@ -1,6 +1,11 @@
 const ServiceModel = require('../models/service');
 
 class serviceService {
+    async create(service) {
+        const createdService = await ServiceModel.create({...service});
+        return createdService;
+    }
+
     async getServiceByCategory(category) {
         const services = await ServiceModel.find({ category })
         return services
@@ -9,12 +14,6 @@ class serviceService {
     async getDistinctCategories() {
         const categories = await ServiceModel.distinct('category')
         return categories
-    }
-
-    async create(service) {
-        const createdService = new ServiceModel({...service})
-        await createdService.save()
-        return createdService
     }
 }
 

@@ -1,6 +1,16 @@
 const ServiceService = require('../services/serviceService')
 
 class serviceController {
+    async create(req, res) {
+        try {
+          const service = await ServiceService.create(req.body);
+          console.log(service);
+          res.json(service);
+        } catch (e) {
+          res.status(500).json(e);
+        }
+    }
+
     async getCategories(req, res) {
         try {
             const categories = await ServiceService.getDistinctCategories()
