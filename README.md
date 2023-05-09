@@ -1,5 +1,6 @@
-Quick start
-(set up two connected nodes and mine 1 block)
+# Quick start
 
+```Node js
 npm install
 npm run dev
+```
