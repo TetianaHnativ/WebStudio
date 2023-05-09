@@ -87,6 +87,20 @@ h6 {
     color: var(--gray-color);
 }
 
+.nav-LogInlink {
+  
+    padding: 10px 20px;
+    background-color: #188CE8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav-LogInlink:hover {
+    background-color: #0E63AD;
+    cursor: pointer;
+  }
+
 .nav-contacts:hover,
 .nav-contacts:focus {
     color: var(--blue-active-color);

@@ -33,6 +33,11 @@ app.get('/portfolio', (req, res) => {
   res.render('../public/portfolio');
 });
 
+app.get('/auth', (req, res) => {
+  res.render('../public/auth');
+});
+
+
 app.use((req, res) => {
   res.status(404).render('../public/error')
 });
