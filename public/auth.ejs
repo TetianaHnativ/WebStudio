@@ -19,13 +19,13 @@
                 <div class="form-content">
                     <div class="logo" lang="en">Web<span class="logo-header">Studio</span></div>
                     <header>Увійти</header>
-                    <form action="#">
+                    <form action="/auth/login" method="POST">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" id="username" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Пароль" class="password">
+                            <input type="password" placeholder="Пароль" id="password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
@@ -67,22 +67,22 @@
                 <div class="form-content">
                     <div class="logo" lang="en">Web<span class="logo-header">Studio</span></div>
                     <header>Реєстрація</header>
-                    <form action="#">
+                    <form id="signupForm" action="/auth/registration" method="POST">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                          <input type="email" placeholder="Email" name="email" class="input" required>
                         </div>
-
+                      
                         <div class="field input-field">
-                            <input type="password" placeholder="Створіть пароль" class="password">
+                          <input type="password" placeholder="Створіть пароль" name="password" class="password" required>
                         </div>
-
+                      
                         <div class="field input-field">
-                            <input type="password" placeholder="Пітвердіть пароль" class="password">
-                            <i class='bx bx-hide eye-icon'></i>
+                          <input type="password" placeholder="Підтвердіть пароль" name="confirmPassword" class="password" required>
+                          <i class='bx bx-hide eye-icon'></i>
                         </div>
-
+                      
                         <div class="field button-field">
-                            <button>Зареєструватися</button>
+                          <button type="submit">Зареєструватися</button>
                         </div>
                     </form>
 

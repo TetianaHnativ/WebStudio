@@ -25,20 +25,69 @@ links.forEach(link => {
        forms.classList.toggle("show-signup");
     })
 })
-const signupForm = document.querySelector(".signup form");
+const signupForm = document.querySelector('#signupForm');
 
-signupForm.addEventListener("submit", e => {
-    e.preventDefault(); //prevent form submission
-    
-    const passwordFields = signupForm.querySelectorAll(".password");
-    const password1 = passwordFields[0].value;
-    const password2 = passwordFields[1].value;
-    
-    if(password1 !== password2){
-        alert("Паролі не співпадають!");
-        return;
+signupForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const passwordFields = signupForm.querySelectorAll('.password');
+  const password1 = passwordFields[0].value;
+  const password2 = passwordFields[1].value;
+
+  if (password1 !== password2) {
+    alert('Паролі не співпадають!');
+    return;
+  }
+
+  const formData = new FormData(signupForm);
+  const username = formData.get('email');
+  const password = formData.get('password');
+  console.log()
+  try {
+    const response = await fetch('/auth/registration', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      console.log(data.message);
+        window.location.href = "/auth";
+    } else {
+      console.log(data.message);
     }
-    
-    //continue with form submission
-    signupForm.submit();
-})
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+
+const loginForm = document.querySelector(".login form");;
+
+loginForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const username = loginForm.querySelector('#username').value;
+  const password = loginForm.querySelector('#password').value;
+  console.log(username)
+  console.log(password)
+  const response = await fetch('/auth/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ username, password })
+  });
+
+  
+  // Обробити відповідь від сервера
+  if (response.ok) {
+    window.location.href = "/";
+  } else {
+    console.log("error");
+  }
+});
