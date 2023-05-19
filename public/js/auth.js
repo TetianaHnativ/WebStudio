@@ -42,7 +42,6 @@ signupForm.addEventListener('submit', async (event) => {
   const formData = new FormData(signupForm);
   const username = formData.get('email');
   const password = formData.get('password');
-  console.log()
 
   const response2 = await fetch('/auth/registration', {
     method: 'POST',
@@ -53,7 +52,6 @@ signupForm.addEventListener('submit', async (event) => {
   });
 
   if (response2.ok) {
-      console.log(data.message);
       window.location.href = "/auth";
   } else {
     const errorData2 = await response2.json();
