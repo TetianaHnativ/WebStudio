@@ -18,6 +18,24 @@ for (let i = 0; i < closeModalBtn.length; i++) {
     };
 }
 
+const scriptTag1 = document.createElement('script');
+scriptTag1.src = 'https://unpkg.com/imask';
+scriptTag1.addEventListener('load', function() {
+    
+    const phoneInput1 = document.getElementById('phone1');
+    const phoneMask1 = IMask(phoneInput1, {
+        mask: '+{38}(000)-000-00-00'
+    });
+
+    phoneInput1.addEventListener('input', function() {
+        const phoneRegex1 = /^\+38\(\d{3}\)-\d{3}-\d{2}-\d{2}$/;
+        const isValid1 = phoneRegex1.test(phoneInput1.value);
+
+        phoneInput1.setCustomValidity(isValid1 ? '' : 'Please enter a valid phone number');
+    });
+});
+document.head.appendChild(scriptTag1);
+
 // Додаємо подію до форми
 form1.addEventListener('submit', async (event) => {
   event.preventDefault();

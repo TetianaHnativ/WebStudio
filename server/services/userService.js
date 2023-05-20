@@ -1,5 +1,6 @@
 const UserModel = require("../models/user");
-const bcrypt = require('bcryptjs')
+const RoleModel = require("../models/role");
+const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 
 const mailService = require('../services/mailService');
@@ -9,7 +10,7 @@ const ApiError = require('../error/apiError');
 
 class UserService {
     async registration(username, password) {
-        const candidate = await UserModel.findOne({username})
+        const candidate = await UserModel.findOne({username});
         if (candidate) {
             throw ApiError.BadRequest(`* Емейл ${username} вже існує`);
         }
@@ -17,7 +18,8 @@ class UserService {
         const hashPassword = await bcrypt.hash(password, 3);
         const activationLink = uuid.v4();
 
-        const user = await UserModel.create({username, password: hashPassword, activationLink});
+        const UserRole = await RoleModel.findOne({value: "USER"});
+        const user = await UserModel.create({username, password: hashPassword, activationLink, roles: [UserRole.value]});
         await mailService.sendActivationMail(username, `${process.env.API_URL}/auth/activate/${activationLink}`);
         
         const userDTO = new UserDTO(user)

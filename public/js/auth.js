@@ -17,7 +17,7 @@ pwShowHide.forEach(eyeIcon => {
         })
         
     })
-})      
+})
 
 links.forEach(link => {
     link.addEventListener("click", e => {
@@ -25,6 +25,7 @@ links.forEach(link => {
        forms.classList.toggle("show-signup");
     })
 })
+
 const signupForm = document.querySelector('#signupForm');
 
 signupForm.addEventListener('submit', async (event) => {
@@ -35,7 +36,7 @@ signupForm.addEventListener('submit', async (event) => {
   const password2 = passwordFields[1].value;
 
   if (password1 !== password2) {
-    alert('Паролі не співпадають!');
+    showErrorRegistration('* Паролі не співпадають!');
     return;
   }
 
