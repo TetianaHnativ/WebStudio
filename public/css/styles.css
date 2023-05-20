@@ -97,6 +97,20 @@ h6 {
 .nav-LogInlink:hover {
     background-color: #0E63AD;
     cursor: pointer;
+}
+
+.nav-LogOutlink {
+  
+    padding: 10px 20px;
+    background-color: #e41414;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav-LogOutlink:hover {
+    background-color: #c24d4d;
+    cursor: pointer;
   }
 
 .nav-contacts:hover,
