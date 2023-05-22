@@ -28,7 +28,8 @@ app.use(errorMiddleware);
 app.get('/', async (req, res) => {
   try {
     const categories = await ServiceModel.distinct('category');
-    res.render('../public/index', { categories });
+    const isAuthenticated = req.cookies.refreshToken;
+    res.render('../public/index', { categories, isAuthenticated });
   } catch (e) {
     res.status(500).json(e);
   }

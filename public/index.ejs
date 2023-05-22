@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
+    <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,6 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
-
 </head>
 
 <body>
@@ -42,9 +42,16 @@
                     <li>
                         <a href="tel:+380960458920" class="nav-contacts">+38 096 045 89 20</a>
                     </li>
-                    <li>
-                        <a href="/auth" class="nav-LogInlink">Log in</a>
-                    </li>
+                        
+                        <% if (isAuthenticated) { %>
+                            <li>
+                                <a href="" class="nav-LogOutlink" id="logoutButton">Log out</a>
+                            </li>
+                        <% } else { %>
+                            <li>
+                                <a href="/auth" class="nav-LogInlink">Log in</a>
+                            </li>
+                        <% } %>
                 </ul>
             </div>
 
@@ -105,7 +112,7 @@
                 <ul class="services">
                     <li class="services-item">
                         <figure>
-                            <a href="#"><img src="./images/img.jpg" alt="Програміст пише код" width="370"
+                            <a href=""><img src="./images/img.jpg" alt="Програміст пише код" width="370"
                                     height="294"></a>
                             <figcaption class="servises-figcaption">
                                 <h3 class="servises-item-title">Десктопні додатки</h3>
@@ -114,7 +121,7 @@
                     </li>
                     <li class="services-item">
                         <figure>
-                            <a href="#"><img src="./images/img(1).jpg"
+                            <a href=""><img src="./images/img(1).jpg"
                                     alt="Розробник переносить мобільний застосунок на ноутбук" width="370"
                                     height="294"></a>
                             <figcaption class="servises-figcaption">
@@ -124,7 +131,7 @@
                     </li>
                     <li class="services-item">
                         <figure>
-                            <a href="#"><img src="./images/img(2).jpg"
+                            <a href=""><img src="./images/img(2).jpg"
                                     alt="Графічний дизайнер працює з мозаїкою на планшеті" width="370" height="294"></a>
                             <figcaption class="servises-figcaption">
                                 <h3 class="servises-item-title">Дизайнерські рішення</h3>

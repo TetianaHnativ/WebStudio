@@ -17,7 +17,7 @@ pwShowHide.forEach(eyeIcon => {
         })
         
     })
-})      
+})
 
 links.forEach(link => {
     link.addEventListener("click", e => {
@@ -25,6 +25,7 @@ links.forEach(link => {
        forms.classList.toggle("show-signup");
     })
 })
+
 const signupForm = document.querySelector('#signupForm');
 
 signupForm.addEventListener('submit', async (event) => {
@@ -35,33 +36,29 @@ signupForm.addEventListener('submit', async (event) => {
   const password2 = passwordFields[1].value;
 
   if (password1 !== password2) {
-    alert('Паролі не співпадають!');
+    showErrorRegistration('* Паролі не співпадають!');
     return;
   }
 
   const formData = new FormData(signupForm);
   const username = formData.get('email');
   const password = formData.get('password');
-  console.log()
-  try {
-    const response = await fetch('/auth/registration', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    });
 
-    const data = await response.json();
+  const response2 = await fetch('/auth/registration', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  });
 
-    if (response.ok) {
-      console.log(data.message);
-        window.location.href = "/auth";
-    } else {
-      console.log(data.message);
-    }
-  } catch (error) {
-    console.error(error);
+  if (response2.ok) {
+      window.location.href = "/auth";
+  } else {
+    const errorData2 = await response2.json();
+    const errorMessage2 = errorData2.message;
+    // Відобразити повідомлення про помилку
+    showErrorRegistration(errorMessage2);
   }
 });
 
@@ -73,8 +70,7 @@ loginForm.addEventListener('submit', async (e) => {
 
   const username = loginForm.querySelector('#username').value;
   const password = loginForm.querySelector('#password').value;
-  console.log(username)
-  console.log(password)
+
   const response = await fetch('/auth/login', {
     method: 'POST',
     headers: {
@@ -88,6 +84,19 @@ loginForm.addEventListener('submit', async (e) => {
   if (response.ok) {
     window.location.href = "/";
   } else {
-    console.log("error");
+    const errorData = await response.json();
+    const errorMessage = errorData.message;
+    // Відобразити повідомлення про помилку
+    showErrorLogin(errorMessage);
   }
 });
+
+function showErrorLogin(message) {
+  const errorContainer = document.getElementById('error-container');
+  errorContainer.innerHTML = `<p class="error-message">${message}</p>`;
+}
+
+function showErrorRegistration(message) {
+  const errorContainer = document.getElementById('error-container2');
+  errorContainer.innerHTML = `<p class="error-message">${message}</p>`;
+}

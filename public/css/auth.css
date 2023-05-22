@@ -116,7 +116,7 @@ form{
     background-color: #d4d4d4;
 }
 .line::before{
-    content: 'Or';
+    content: 'Aбо';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -186,4 +186,25 @@ a.google span{
 
 .logo-header {
     color:#000000;
+}
+
+/* Error container */
+#error-container {
+    margin-top: 10px;
+  }
+  
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+}
+
+#error-container2 {
+    margin-top: 10px;
+  }
+  
+.error-message2 {
+    color: red;
+    font-size: 14px;
+    margin: 0;
 }

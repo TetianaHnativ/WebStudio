@@ -99,6 +99,21 @@ h6 {
     cursor: pointer;
 }
 
+.nav-LogOutlink {
+  
+    padding: 10px 20px;
+    background-color: #e41414;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav-LogOutlink:hover {
+    background-color: #c24d4d;
+    cursor: pointer;
+  }
+>>>>>>> b2cc2fc7a736756b65a2cbfe438e36a9603b62fa
+
 .nav-contacts:hover,
 .nav-contacts:focus {
     color: var(--blue-active-color);
@@ -242,25 +257,22 @@ h6 {
 .services-item figure {
     position: relative;
     overflow: hidden;
+}
 
-    &:hover figcaption {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+.services-item figure {
+    position: relative;
+    overflow: hidden;
+}
 
-    &:focus figcaption {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+.services-item figure:hover figcaption,
+.services-item figure:focus figcaption {
+    opacity: 1;
+    transform: translateY(0px);
+}
 
-    &:hover img {
-        transform: scale(1.15);
-    }
-
-    &:focus img {
-        transform: scale(1.15);
-    }
-
+.services-item figure:hover img,
+.services-item figure:focus img {
+    transform: scale(1.15);
 }
 
 .services-item figure img {
