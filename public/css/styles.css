@@ -100,7 +100,7 @@ h6 {
 }
 
 .nav-LogOutlink {
-  
+
     padding: 10px 20px;
     background-color: #e41414;
     color: #fff;
@@ -111,8 +111,7 @@ h6 {
 .nav-LogOutlink:hover {
     background-color: #c24d4d;
     cursor: pointer;
-  }
->>>>>>> b2cc2fc7a736756b65a2cbfe438e36a9603b62fa
+}
 
 .nav-contacts:hover,
 .nav-contacts:focus {
@@ -144,6 +143,7 @@ h6 {
 .line {
     margin-top: 30px;
 }
+
 /* Hero */
 
 .hero {
@@ -672,6 +672,7 @@ h6 {
     width: 100%;
     margin-bottom: 10px;
 }
+
 .material-icons {
     padding: 8px;
     min-width: 18px;
