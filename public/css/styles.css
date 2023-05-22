@@ -85,10 +85,8 @@ h6 {
     color: var(--gray-color);
 }
 
-HEAD
-
 .nav-LogInlink {
-  
+
     padding: 10px 20px;
     background-color: #188CE8;
     color: #fff;
@@ -99,7 +97,7 @@ HEAD
 .nav-LogInlink:hover {
     background-color: #0E63AD;
     cursor: pointer;
-  }
+}
 
 .nav-contacts:hover,
 .nav-contacts:focus {
@@ -131,7 +129,6 @@ HEAD
 .line {
     margin-top: 30px;
 }
-
 /* Hero */
 
 .hero {
@@ -602,16 +599,19 @@ HEAD
     border-radius: 4px;
     box-sizing: border-box;
     height: 40px;
+    width: 448px;
 
     color: var(--gray-color);
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     padding: 4px 8px;
+
+    width: 100%;
+    text-align: center;
 }
 
-
-#user-comment {
+#comment {
     height: 40px;
 }
 
@@ -652,6 +652,18 @@ HEAD
     pointer-events: all;
 }
 
+.input-icons i {
+    position: absolute;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.material-icons {
+    padding: 8px;
+    min-width: 18px;
+}
 
 /* Error */
 
