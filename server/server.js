@@ -36,7 +36,8 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/portfolio', (req, res) => {
-  res.render('../public/portfolio');
+  const isAuthenticated = req.cookies.refreshToken;
+  res.render('../public/portfolio', {isAuthenticated});
 });
 
 app.get('/auth', (req, res) => {

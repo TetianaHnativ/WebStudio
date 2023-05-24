@@ -37,7 +37,16 @@
                 <ul class="contacts-list">
                     <li><a href="mailto:webstudio@gmail.com" class="nav-contacts">webstudio@gmail.com</a></li>
                     <li><a href="tel:+380960458920" class="nav-contacts">+38 096 045 89 20</a></li>
-                    <li><a href="/auth" class="nav-LogInlink">Log in</a></li>
+                    
+                    <% if (isAuthenticated) { %>
+                        <li>
+                            <a href="" class="nav-LogOutlink" id="logoutButton">Log out</a>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/auth" class="nav-LogInlink">Log in</a>
+                        </li>
+                    <% } %>
                 </ul>
 
             </div>
