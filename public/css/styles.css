@@ -137,7 +137,7 @@ h6 {
 
 .container {
     display: flex;
-    gap: 344px;
+    gap: 100px;
 }
 
 .line {
@@ -158,7 +158,7 @@ h6 {
 }
 
 .hero-title {
-    width: 696px;
+    width: 100%;
     height: 120px;
 
     font-weight: 900;
@@ -329,6 +329,7 @@ h6 {
 
 .workers {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -386,6 +387,7 @@ h6 {
     background-color: var(--background-color);
     padding-top: 60px;
     display: flex;
+    justify-content: center;
 }
 
 .address-contacts {
@@ -411,7 +413,7 @@ h6 {
 }
 
 .address-list {
-    width: 231px;
+    width: 250px;
     margin: 20px 0px 60px 250px;
 }
 
@@ -452,10 +454,11 @@ h6 {
 
 .subscribe {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .subscription-email {
-    width: 358px;
+    width: 260px;
     background: var(--background-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));

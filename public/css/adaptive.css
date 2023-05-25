@@ -1,0 +1,153 @@
+
+@media screen and (max-width: 767px) {
+
+    .logo{
+        margin-left: 15px;
+    }
+    .nav-list{
+      /* display: none; */
+      flex-direction: column;
+      gap: 1px;
+        padding: 0;
+        margin: 0;
+        
+    }
+    .nav{
+        gap:10%;
+        
+    }
+    .container{
+        gap: 7%;
+        justify-content: center;
+    }
+    
+    .nav-contacts{
+        display: none;
+    }
+ .contacts-list{
+    gap: 10px;
+ }
+    .hero-title{
+        width: 100%;
+        font-size: 20px;
+        height: auto;
+        overflow-wrap: break-word;
+       
+    }
+    button[type="submit"]{
+        padding: 10px;
+    }
+
+    
+    .hero-img {
+        width: 100%; 
+        height: 225px; 
+        background-image: url("/public/images/hero.webp");
+        background-size: cover;
+  background-position: center center;
+    }
+
+   
+   .advantages{
+  
+    width: calc((100% - 60px) / 2); 
+    padding: 0 15px; 
+    justify-content: center; 
+   }
+   .advantage-name, .advantage-description{
+    text-align: center;
+   }
+.section-title{
+    font-size: 45px;
+}
+
+   
+   .section{
+    display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+   }
+   .services{
+    margin: 10px;
+    align-items: center;
+  justify-content: center;
+   }
+  .footer{
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 10px;
+  }
+  .address-list{
+    margin: 15px;
+  }
+  .footer-join{
+    
+    margin: 10px ;
+  }
+  .join-title{
+    text-align: center;
+  }
+  .social-networks{
+    margin: 20px;
+    
+  }
+  .subscription-title{
+    text-align: center;
+  }
+  .subscription-button{
+    width: 260px;
+  }
+  .subscribe{
+    flex-direction: column;
+    
+  }
+  .subscription{
+    margin: auto;
+   margin-bottom: 20px;
+  }
+  .modal-content {
+    margin: 5px;
+    max-width: 100%;
+}
+
+select {
+    width: 100%;
+}
+.buttons-list {
+    width: 98%;
+    gap: 5px;
+    margin: 20px 0px 20px 5px;
+    flex-wrap: wrap;
+    
+}
+
+.shop-button {
+    font-size: 14px;
+    padding: 4px 12px;
+}
+
+/* Adjust the product item size and margin for smaller screens */
+.products-list {
+    width: auto;
+    height: auto;
+    gap: 20px;
+    margin: 0 auto 20px auto;
+}
+
+.products-item {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+}
+
+.product-container {
+    margin: 10px;
+    text-align: center;
+}
+  
+}
