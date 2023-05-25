@@ -62,19 +62,19 @@
 }
 
    
-   .section{
+   .section {
     display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
    }
-   .services{
+   .services {
     margin: 10px;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
    }
   .footer{
     width: 100%;
@@ -150,4 +150,8 @@ select {
     text-align: center;
 }
   
+}
+
+@media screen and (max-width: 1405px) {
+
 }

@@ -131,6 +131,7 @@ h6 {
     margin-top: 8px;
     justify-content: flex-end; 
     width: 443px;
+    margin-right: 12%;
 }
 
 .nav {
@@ -140,7 +141,7 @@ h6 {
 
 .container {
     display: flex;
-    gap: 320px;
+    justify-content: space-between;
 }
 
 .line {
