@@ -29,14 +29,17 @@ app.get('/', async (req, res) => {
   try {
     const categories = await ServiceModel.distinct('category');
     const isAuthenticated = req.cookies.refreshToken;
-    res.render('../public/index', { categories, isAuthenticated });
+    const username = req.cookies.username;
+    res.render('../public/index', { categories, isAuthenticated, username});
   } catch (e) {
     res.status(500).json(e);
   }
 });
 
 app.get('/portfolio', (req, res) => {
-  res.render('../public/portfolio');
+  const isAuthenticated = req.cookies.refreshToken;
+  const username = req.cookies.username;
+  res.render('../public/portfolio', {isAuthenticated, username});
 });
 
 app.get('/auth', (req, res) => {

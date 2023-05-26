@@ -293,7 +293,11 @@
                         <label for="email" class="modal-field-name">Пошта</label>
                         <div class="input-icons">
                             <i class="material-icons">mail</i>
-                            <input type="email" class="modal-field-input" id="email" name="Пошта" required>
+                            <% if (username) { %>
+                                <input type="email" class="modal-field-input" id="email" name="Пошта" value="<%= username %>" disabled required>
+                            <% } else { %> 
+                                <input type="email" class="modal-field-input" id="email" name="Пошта" required>
+                            <% } %>
                         </div>
                     </li>
 
@@ -356,7 +360,11 @@
                         <label for="user-name" class="modal-field-name"> Email</label>
                         <div class="input-icons">
                             <i class="material-icons">mail</i>
-                            <input type="email" class="modal-field-input" name="email" id="email1" required>
+                            <% if (username) { %>
+                                <input type="email" class="modal-field-input" id="email" name="Пошта" value="<%= username %>" disabled required>
+                            <% } else { %> 
+                                <input type="email" class="modal-field-input" id="email" name="Пошта" required>
+                            <% } %>
                         </div>
                     </li>
 

@@ -56,7 +56,8 @@ class UserService {
 
         return {
             ...tokens,
-            user: userDTO
+            user: userDTO,
+            username
         }
     }
 

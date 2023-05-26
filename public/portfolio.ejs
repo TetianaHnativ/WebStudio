@@ -38,7 +38,15 @@
                 <ul class="contacts-list">
                     <li><a href="mailto:webstudio@gmail.com" class="nav-contacts">webstudio@gmail.com</a></li>
                     <li><a href="tel:+380960458920" class="nav-contacts">+38 096 045 89 20</a></li>
-                    <li><a href="/auth" class="nav-LogInlink">Log in</a></li>
+                    <% if (isAuthenticated) { %>
+                        <li>
+                            <a href="" class="nav-LogOutlink" id="logoutButton">Log out</a>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/auth" class="nav-LogInlink">Log in</a>
+                        </li>
+                    <% } %>
                 </ul>
 
             </div>
@@ -194,7 +202,11 @@
                         <label for="user-email" class="modal-field-name">Пошта</label>
                         <div class="input-icons">
                             <i class="material-icons">mail</i>
-                            <input type="email" class="modal-field-input" id="email" name="Пошта" required>
+                            <% if (username) { %> <!-- check if username variable exists -->
+                                <input type="email" class="modal-field-input" id="email" name="Пошта" value="<%= username %>" disabled required> <!-- set value and disabled attribute based on username variable -->
+                            <% } else { %> <!-- if username variable does not exist -->
+                                <input type="email" class="modal-field-input" id="email" name="Пошта" required> <!-- normal input field -->
+                            <% } %>
                         </div>
                     </li>
 
