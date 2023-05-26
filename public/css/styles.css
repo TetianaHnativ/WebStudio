@@ -121,13 +121,17 @@ h6 {
 .nav-list {
     display: flex;
     gap: 50px;
-    margin: 8px 0px 0px 0px;
+    margin: 8px 0px 0px ;
+    margin: 8px 0px 0px auto;
 }
 
 .contacts-list {
     display: flex;
     gap: 50px;
     margin-top: 8px;
+    justify-content: flex-end; 
+    width: 460px;
+    margin-right: 12%;
 }
 
 .nav {
@@ -137,7 +141,7 @@ h6 {
 
 .container {
     display: flex;
-    gap: 100px;
+    justify-content: space-between;
 }
 
 .line {

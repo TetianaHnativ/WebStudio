@@ -65,19 +65,19 @@
 }
 
    
-   .section{
+   .section {
     display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
    }
-   .services{
+   .services {
     margin: 10px;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
    }
   .footer{
     width: 100%;
@@ -154,6 +154,7 @@ select {
 }
   
 }
+<<<<<<< HEAD
 @media screen and (min-width: 200px ) and (max-width: 350px){
   .nav-LogInlink{
     padding: 3px 5px;
@@ -165,4 +166,9 @@ select {
   display:unset;
 
 }
+=======
+
+@media screen and (max-width: 1405px) {
+
+>>>>>>> 1bb99393742e68fda8b9dec959a7290c6135bf8f
 }
