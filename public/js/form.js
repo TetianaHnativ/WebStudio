@@ -138,3 +138,51 @@ if(logoutButton) {
         }
     });
 }
+
+
+function subscribe() {
+    const emailInput = document.getElementById('email-input').value;
+    const errorMessage = document.getElementById('error-message');
+    const successMessage = document.getElementById('success-message');
+
+    // Очищаємо попередні повідомлення про помилку та успіх
+    errorMessage.textContent = '';
+    successMessage.textContent = '';
+
+    if (emailInput.trim() === '') {
+        errorMessage.textContent = '* Введіть електронну пошту.';
+    } else if (!isValidEmail1(emailInput)) {
+        errorMessage.textContent = '* Введіть правильну електронну пошту.';
+    } else {
+        fetch('/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: emailInput })
+        })
+        .then(response => {
+            if (response.ok) {
+                // Показуємо успішне повідомлення
+                successMessage.textContent = 'Підписка успішно оформлена.';
+
+                // Очищаємо поле email
+                document.getElementById('email-input').value = '';
+            } else {
+                // Показуємо повідомлення про помилку
+                errorMessage.textContent = '* Сталася помилка.';
+            }
+        })
+        .catch(error => {
+            // Показуємо повідомлення про помилку
+            errorMessage.textContent = '* Сталася помилка.';
+            console.error(error);
+        });
+    }
+}
+
+const isValidEmail1 = (email) => {
+    const re =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
