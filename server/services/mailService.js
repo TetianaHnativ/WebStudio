@@ -29,6 +29,22 @@ class MailService {
                 `
         })
     }
+
+    async sendTelegramMail(email) {
+        await this.transporter.sendMail({
+            from: process.env.SMTP_USER,
+            to: email,
+            subject: "Підписка на пошту",
+            text: '',
+            html:
+                `
+                    <p>Дякуємо за підписку на нашу розсилку!</p>
+                    <p>Для отримання більше інформації перейдіть за посиланням на наш телеграм-канал:</p>
+                    <a href="https://t.me/your_channel">https://t.me/your_channel</a>
+                `
+     
+        })
+    }
 }
 
 module.exports = new MailService();

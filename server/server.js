@@ -7,6 +7,7 @@ const cors = require('cors')
 
 const router = require('./routes/index.js');
 const ServiceModel = require('./models/service.js');
+const subscriptionRouter = require('./routes/subscripteRouter.js');
 const errorMiddleware = require('./middlewares/errorMiddleware.js')
 //DataBase
 const PORT = process.env.PORTS || 5000;
@@ -22,6 +23,7 @@ app.use(cors());
 
 //Get roters
 app.use(router);
+app.use(subscriptionRouter)
 app.use(errorMiddleware);
 
 //Static files

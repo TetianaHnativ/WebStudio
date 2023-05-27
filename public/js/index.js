@@ -12,7 +12,3 @@ serviceSelect.innerHTML = services
 });
 
 
-function clearEmailField() {
-        var emailInput = document.getElementById("email-input");
-        emailInput.value = ""; // Очищаємо значення поля вводу
-}

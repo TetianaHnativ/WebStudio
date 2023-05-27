@@ -163,11 +163,13 @@
                 <h3 class="subscription-title">Підпишіться на розсилку</h3>
                 <div class="subscribe">
                     <input type="email" class="subscription-email" id="email-input" placeholder="E-mail" />
-                    <button type="submit" class="subscription-button" onclick="clearEmailField()">
+                    <button type="submit" class="subscription-button" onclick="subscribe()">
                         Підписатися <img src="./images/icon-telegram.svg" class="footer-icon-telegram"
                             alt="icon-telegram">
                     </button>
                 </div>
+                <span id="error-message" class="error-message"></span>
+                <span id="success-message" class="success-message"></span>
             </div>
         </footer>
     </div>

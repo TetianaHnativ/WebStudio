@@ -704,11 +704,18 @@ h6 {
 }
 
 .error-message {
-    font-size: 24px;
-    color: #666;
-    margin-top: 20px;
+    margin-top: 10px;
+    display: block;
+    color: red;
+    font-size: 14px;
 }
 
+.success-message {
+    margin-top: 10px;
+    display: block;
+    color: green;
+    font-size: 14px;
+}
 .home-link {
     display: inline-block;
     background-color: #333;
