@@ -100,7 +100,7 @@ h6 {
     justify-content: center;
     
     border-radius: 5px;
-    display: flex;
+    padding: 10px 20px;
 }
 
 .nav-LogInlink:hover {
@@ -110,10 +110,18 @@ h6 {
 
 .nav-LogOutlink {
 
-    padding: 10px 20px;
+    height: 40px;
+    width: 80px;
+
     background-color: #e41414;
     color: #fff;
     text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    
+    padding: 10px 20px;
     border-radius: 5px;
 }
 
