@@ -18,7 +18,7 @@
 body {
     width: 100%;
     background-color: var(--light-gray);
-
+overflow-x: hidden;
 }
 
 .wrapper {
@@ -73,7 +73,7 @@ h6 {
     font-weight: 700;
     font-size: 26px;
     color: var(--logo-color);
-    margin-left: 250px;
+    margin-left: 25px;
 }
 
 .logo-header {
@@ -81,18 +81,26 @@ h6 {
 }
 
 .nav-contacts {
-
+    display: flex;
+    width: 125px;
     font-size: 14px;
     color: var(--gray-color);
 }
 
 .nav-LogInlink {
 
-    padding: 10px 20px;
+    height: 40px;
+    width: 80px;
+    
     background-color: #0000FF;
     color: #fff;
     text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
     border-radius: 5px;
+    display: flex;
 }
 
 .nav-LogInlink:hover {
@@ -132,7 +140,7 @@ h6 {
     margin-top: 8px;
     justify-content: flex-end; 
     width: 460px;
-    margin-right: 12%;
+    margin-right: 10px;
 }
 
 .nav {
@@ -143,6 +151,8 @@ h6 {
 .container {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
+
 }
 
 .line {
@@ -385,14 +395,16 @@ h6 {
 
 .logo-footer {
     color: var(--white-color)
+
 }
 
 .footer {
     height: 192px;
     background-color: var(--background-color);
-    padding-top: 60px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .address-contacts {
@@ -419,7 +431,7 @@ h6 {
 
 .address-list {
     width: 250px;
-    margin: 20px 0px 60px 250px;
+    margin: 20px 0px 60px 25px;
 }
 
 .address-item {
@@ -428,7 +440,7 @@ h6 {
 }
 
 .footer-join {
-    margin-left: 90px;
+    margin-left: 5px;
 }
 
 .join-title {
@@ -446,7 +458,7 @@ h6 {
 }
 
 .subscription {
-    margin-left: 150px;
+    margin-left: 2%;
 }
 
 .subscription-title {
