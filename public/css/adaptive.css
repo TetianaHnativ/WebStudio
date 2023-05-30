@@ -12,18 +12,21 @@
   width: 100%;
 }
 .logo{
-  margin-left: 10px;
+  margin-left: 25px;
 }
 .nav{
-  gap: 20px;
-    align-content: space-around;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  gap: 30px;
+  align-content: center;
+  display: flex;
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+  align-content: flex-end;
+  justify-items: center;
+  align-items: center;
+  align-items: flex-end;
 }
 .nav-contacts{
- display: block;
- margin-right: 10px;
+ display: none;
 }
 .contacts-list{
   gap: 10px;
@@ -34,7 +37,7 @@
    
 }
 .header{
-  height: 100px;
+  height: 80px;
   padding: 0;
 }
 .container{
@@ -55,14 +58,9 @@ justify-content: space-evenly;
     justify-content: center;
 }
 }
-@media screen and (min-width: 768px ) and (max-width: 934px){
-  .nav-list {
-    flex-direction: column;
-    gap: 1px;
-    padding: 0;
-    margin: 0;
-}
-}
+/* @media screen and (min-width: 768px ) and (max-width: 934px){
+  
+} */
 
 @media screen and (max-width: 767px) {
 
@@ -96,7 +94,7 @@ justify-content: space-evenly;
   }
 .contacts-list{
   gap: 10px;
-  margin-top: 0px;
+  /* margin-top: 0px; */
   margin-right: 10px;
 }
   .hero-title{
@@ -227,27 +225,26 @@ justify-content: center;
 
 }
 
-@media screen and (min-width: 200px ) and (max-width: 350px){
-.nav-LogInlink{
-  display: inline-block;
-  height: 17px;
-  width: 45px;
+@media screen and (min-width: 200px ) and (max-width: 361px){
+.nav-LogInlink, .nav-LogOutlink{
+  height: 20px;
+  width: 25px;
+  display: flex;
+
 }
-.nav-LogOutlink{
-  display: inline-block;
-  height: 18px;
-  width: 55px;
+.contacts-list{
+  margin-top: 0px;
 }
 .logo{
 margin: 0px 0px 0px 2px;
 font-size: 22px;
 }
 .container{
-gap: 31px;
+gap: 3%;
 }
 .contacts-list{
-display:unset;
-margin-right: 0px;
+/* display:unset; */
+margin-right: 2px;
 
 }
 .products-list img {
